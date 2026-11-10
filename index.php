@@ -208,28 +208,69 @@
 
 
     <!-- CONTACT SECTION -->
-    <section id="contact" class="container section-padding">
+    
+    
+<section id="contact" class="section-padding">
+    <div class="container">
+        <h2 class="section-title text-center">Contact Me</h2>
 
-        <div class="contact-card text-center">
-
-            <h2 class="section-title">Let's Connect</h2>
-
-            <p>
-                Thank you for visiting my portfolio.
-                Feel free to explore my work and follow my
-                learning journey.
+        <div class="contact-card mx-auto" style="max-width: 600px;">
+            <p class="text-center">
+                Have a question? Send me a message!
             </p>
 
-            <a
-                href="https://github.com/justin467-hhy"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="btn btn-primary">
-                Visit My GitHub
-            </a>
+            <form action="save_message.php" method="POST">
 
+                <div class="mb-3">
+                    <label for="name" class="form-label">
+                        Your Name
+                    </label>
+                    <input
+                        type="text"
+                        class="form-control"
+                        id="name"
+                        name="name"
+                        required
+                    >
+                </div>
+
+                <div class="mb-3">
+                    <label for="email" class="form-label">
+                        Your Email
+                    </label>
+                    <input
+                        type="email"
+                        class="form-control"
+                        id="email"
+                        name="email"
+                        required
+                    >
+                </div>
+
+                <div class="mb-3">
+                    <label for="message" class="form-label">
+                        Your Message
+                    </label>
+                    <textarea
+                        class="form-control"
+                        id="message"
+                        name="message"
+                        rows="5"
+                        required
+                    ></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary w-100">
+                    Send Message
+                </button>
+
+            </form>
         </div>
-    </section>
+    </div>
+</section>
+    
+
+    
 
 
     <!-- FOOTER -->
