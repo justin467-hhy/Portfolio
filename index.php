@@ -209,8 +209,7 @@
 
     <!-- CONTACT SECTION -->
     
-    
-<section id="contact" class="section-padding">
+    <section id="contact" class="section-padding">
     <div class="container">
         <h2 class="section-title text-center">Contact Me</h2>
 
@@ -268,6 +267,7 @@
         </div>
     </div>
 </section>
+
     
 
     
