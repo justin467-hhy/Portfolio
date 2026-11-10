@@ -1,18 +1,18 @@
 
--- =====================================
+-- ==========================================
 -- JUSTIN'S PERSONAL PORTFOLIO DATABASE
--- =====================================
+-- Compatible with XAMPP (MySQL / MariaDB)
+-- ==========================================
 
--- Create database
-CREATE DATABASE IF NOT EXISTS portfolio_db;
+CREATE DATABASE IF NOT EXISTS portfolio_db
+CHARACTER SET utf8mb4
+COLLATE utf8mb4_general_ci;
 
--- Select database
 USE portfolio_db;
 
-
--- =====================================
--- 1. PROJECTS TABLE
--- =====================================
+-- ==========================================
+-- PROJECTS TABLE
+-- ==========================================
 
 CREATE TABLE IF NOT EXISTS projects (
     id INT AUTO_INCREMENT PRIMARY KEY,
@@ -22,10 +22,9 @@ CREATE TABLE IF NOT EXISTS projects (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
-
--- =====================================
--- 2. CONTACT MESSAGES TABLE
--- =====================================
+-- ==========================================
+-- CONTACT MESSAGES TABLE
+-- ==========================================
 
 CREATE TABLE IF NOT EXISTS contact_messages (
     id INT AUTO_INCREMENT PRIMARY KEY,
@@ -35,42 +34,37 @@ CREATE TABLE IF NOT EXISTS contact_messages (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
-
--- =====================================
--- 3. INSERT SAMPLE PROJECTS
--- =====================================
+-- ==========================================
+-- SAMPLE PROJECT DATA
+-- ==========================================
 
 INSERT INTO projects (title, description, technology)
-VALUES
-(
+SELECT
     'Personal Portfolio Website',
     'A personal website showcasing my skills and projects.',
     'HTML, CSS, Bootstrap, JavaScript'
-),
-(
+WHERE NOT EXISTS (
+    SELECT 1 FROM projects
+    WHERE title = 'Personal Portfolio Website'
+);
+
+INSERT INTO projects (title, description, technology)
+SELECT
     'Student Database Project',
     'A database project demonstrating basic SQL concepts.',
     'SQL'
+WHERE NOT EXISTS (
+    SELECT 1 FROM projects
+    WHERE title = 'Student Database Project'
 );
 
-
--- =====================================
--- 4. VIEW ALL PROJECTS
--- =====================================
+-- ==========================================
+-- VIEW DATABASE RECORDS
+-- ==========================================
 
 SELECT * FROM projects;
 
-
--- =====================================
--- 5. VIEW ALL CONTACT MESSAGES
--- =====================================
-
 SELECT * FROM contact_messages;
-
-
--- =====================================
--- 6. COUNT TOTAL PROJECTS
--- =====================================
 
 SELECT COUNT(*) AS total_projects
 FROM projects;
