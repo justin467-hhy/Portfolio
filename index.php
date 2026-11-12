@@ -22,7 +22,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
         <div class="container">
 
-            <a class="navbar-brand" href="#home">Justin.</a>
+            <a class="navbar-brand" href="#home">Eyob.</a>
 
             <button class="navbar-toggler" type="button"
                 data-bs-toggle="collapse"
@@ -69,7 +69,7 @@
 
             <p class="hero-subtitle">WELCOME TO MY PORTFOLIO</p>
 
-            <h1>Hello, I'm Justin!</h1>
+            <h1>Hello, I'm Eyob!</h1>
 
             <h3>Future Software Developer</h3>
 
@@ -94,7 +94,7 @@
         <div class="about-content mx-auto text-center">
 
             <p>
-                Hello! My name is Justin. I am a student who enjoys
+                Hello! My name is Eyob. I am a student who enjoys
                 learning about technology and software development.
                 I am interested in web development, programming,
                 and database management.
